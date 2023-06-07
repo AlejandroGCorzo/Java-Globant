@@ -1,5 +1,6 @@
 package com.java.guia7;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -15,12 +16,62 @@ public class Main {
 //        ejercicio10();
 //        ejercicio11();
 //        ejercicio12();
+//        ejercicio13();
+//        ejercicio14();
+//        System.out.println(tp1());
+//        System.out.println(tp2());
+//        System.out.println(tp6(6));
+//        System.out.println(tp7("eureka"));
+        square();
+    }
 
+    public static void square() {
+        Scanner read = new Scanner(System.in);
+        System.out.println("Ingrese el tamaño.");
+        int size = read.nextInt();
+        read.nextLine();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(i == 0 || j == 0 || i == size - 1 || j == size - 1 ? "* " : "  ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static boolean tp7(String str) {
+        String comparator = "eureka";
+        return str.equals(comparator);
+    }
+
+    public static String tp6(int number) {
+        return number % 2 == 0 ? "Par" : "Impar";
+    }
+
+    public static String tp2() {
+        String nombre = "ale";
+        return nombre.toUpperCase();
+    }
+
+    public static int tp1() {
+        Scanner read = new Scanner(System.in);
+        return read.nextInt() + read.nextInt();
+    }
+
+    public static void ejercicio14() {
+        Scanner read = new Scanner(System.in);
+        String[] equipo = new String[2];
+        for (int i = 0; i < equipo.length; i++) {
+            equipo[i] = read.nextLine();
+        }
+        System.out.println(Arrays.toString(equipo));
     }
 
     public static void ejercicio13() {
         Scanner read = new Scanner(System.in);
-
+        String[] equipo = new String[2];
+        equipo[0] = "Ale";
+        equipo[1] = "Lu";
+        System.out.println(Arrays.toString(equipo));
     }
 
     public static void ejercicio12() {
